@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { 
-  LayoutDashboard, 
-  Loader, 
-  Component, 
-  ChevronDown, 
-  Search, 
+import {
+  LayoutDashboard,
+  Loader,
+  Component,
+  ChevronDown,
+  Search,
   Layers,
   ArrowRight
 } from "lucide-react";
@@ -22,7 +22,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          
+
           {/* Brand & Logo */}
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-2.5 group">
@@ -33,10 +33,10 @@ export default function Header() {
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-lg tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
-                  Talent UI Hub
+                  timateo UI Hub
                 </span>
                 <span className="text-[10px] text-indigo-400 font-mono tracking-wider uppercase font-semibold">
-                  10 Modern Dashboards
+                  14+ Interactive Dashboards
                 </span>
               </div>
             </Link>
@@ -46,11 +46,10 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-1">
             <Link
               href="/"
-              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
-                pathname === "/" 
-                  ? "bg-indigo-600/15 text-indigo-400 border border-indigo-500/30" 
+              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${pathname === "/"
+                  ? "bg-indigo-600/15 text-indigo-400 border border-indigo-500/30"
                   : "text-slate-300 hover:text-white hover:bg-slate-800/60"
-              }`}
+                }`}
             >
               Showcase Hub
             </Link>
@@ -60,14 +59,13 @@ export default function Header() {
               <button
                 onClick={() => setDashDropdownOpen(!dashDropdownOpen)}
                 onMouseEnter={() => setDashDropdownOpen(true)}
-                className={`px-3.5 py-2 rounded-lg text-sm font-medium flex items-center gap-1.5 transition-all ${
-                  pathname.startsWith("/dashboards")
+                className={`px-3.5 py-2 rounded-lg text-sm font-medium flex items-center gap-1.5 transition-all ${pathname.startsWith("/dashboards")
                     ? "bg-indigo-600/15 text-indigo-400 border border-indigo-500/30"
                     : "text-slate-300 hover:text-white hover:bg-slate-800/60"
-                }`}
+                  }`}
               >
                 <LayoutDashboard className="w-4 h-4 text-indigo-400" />
-                <span>Dashboards (10)</span>
+                <span>Dashboards ({DASHBOARDS.length})</span>
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform ${dashDropdownOpen ? "rotate-180" : ""}`} />
               </button>
 
@@ -82,11 +80,10 @@ export default function Header() {
                         key={dash.id}
                         href={`/dashboards/${dash.id}`}
                         onClick={() => setDashDropdownOpen(false)}
-                        className={`flex items-center justify-between p-2.5 rounded-xl transition-all ${
-                          pathname === `/dashboards/${dash.id}`
+                        className={`flex items-center justify-between p-2.5 rounded-xl transition-all ${pathname === `/dashboards/${dash.id}`
                             ? "bg-indigo-600/20 text-white border border-indigo-500/30"
                             : "hover:bg-slate-800/80 text-slate-300 hover:text-white"
-                        }`}
+                          }`}
                       >
                         <div className="flex items-center gap-2.5">
                           <span className="w-5 text-center text-xs font-mono font-bold text-slate-500">
@@ -107,14 +104,25 @@ export default function Header() {
               )}
             </div>
 
+            {/* Cards Gallery Link */}
+            <Link
+              href="/cards-gallery"
+              className={`px-3.5 py-2 rounded-lg text-sm font-medium flex items-center gap-1.5 transition-all ${pathname === "/cards-gallery"
+                  ? "bg-indigo-600/15 text-indigo-400 border border-indigo-500/30"
+                  : "text-slate-300 hover:text-white hover:bg-slate-800/60"
+                }`}
+            >
+              <Layers className="w-4 h-4 text-purple-400" />
+              <span>Cards Hub</span>
+            </Link>
+
             {/* Loaders Page Link */}
             <Link
               href="/loaders"
-              className={`px-3.5 py-2 rounded-lg text-sm font-medium flex items-center gap-1.5 transition-all ${
-                pathname === "/loaders"
+              className={`px-3.5 py-2 rounded-lg text-sm font-medium flex items-center gap-1.5 transition-all ${pathname === "/loaders"
                   ? "bg-indigo-600/15 text-indigo-400 border border-indigo-500/30"
                   : "text-slate-300 hover:text-white hover:bg-slate-800/60"
-              }`}
+                }`}
             >
               <Loader className="w-4 h-4 text-pink-400 animate-spin-slow" />
               <span>Loaders</span>
@@ -123,11 +131,10 @@ export default function Header() {
             {/* Components Gallery */}
             <Link
               href="/components-gallery"
-              className={`px-3.5 py-2 rounded-lg text-sm font-medium flex items-center gap-1.5 transition-all ${
-                pathname === "/components-gallery"
+              className={`px-3.5 py-2 rounded-lg text-sm font-medium flex items-center gap-1.5 transition-all ${pathname === "/components-gallery"
                   ? "bg-indigo-600/15 text-indigo-400 border border-indigo-500/30"
                   : "text-slate-300 hover:text-white hover:bg-slate-800/60"
-              }`}
+                }`}
             >
               <Component className="w-4 h-4 text-emerald-400" />
               <span>UI Components</span>
@@ -138,14 +145,14 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <span className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              10 Dashboards Live
+              14+ Suites Live
             </span>
 
             <Link
-              href="/dashboards/eproduct"
+              href="/dashboards/timateo-enterprise"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium text-sm shadow-lg shadow-indigo-500/25 hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all"
             >
-              <span>Explore Dashboards</span>
+              <span>Explore timateo</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

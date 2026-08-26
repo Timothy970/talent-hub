@@ -181,6 +181,72 @@ export const DASHBOARDS: DashboardMeta[] = [
       "Payment history table with brand logos (Google Pay, Amazon)",
       "Mandatory payments team avatars stacked list"
     ]
+  },
+  {
+    id: "timateo-enterprise",
+    title: "timateo Enterprise Control Center",
+    subtitle: "Enterprise Dark Mode Operations Suite",
+    category: "Enterprise SaaS",
+    theme: "Deep Midnight Charcoal & Vibrant Neon Accents",
+    image: "/images/dashboards/1786818174690.webp",
+    accentColor: "from-indigo-600 via-purple-600 to-pink-600",
+    badgeText: "14 Enterprise Views",
+    description: "Full-featured dark mode SaaS suite: Overview, Revenue Intelligence, Executive Reports, Real-time Activity Feed, RBAC User Security, Projects, Logistics Orders, Inventory Catalog, AR Aging Invoices, Settings, Integrations, Threat Security Center, Audit Trail, and Auth.",
+    features: [
+      "14 interactive dark mode management views with instant sub-tab switcher",
+      "Slide-over drawers for User Security, Project Summary, Order Items, and Audit Logs",
+      "Interactive revenue intelligence charts, donut breakdowns, and AI insights feed",
+      "Security posture gauge, threat alerts, and device trust overview"
+    ]
+  },
+  {
+    id: "timateo-civic",
+    title: "timateo Civic & Population Hub",
+    subtitle: "Public Sector & Demographics Management",
+    category: "Civic & Public Sector",
+    theme: "Light Mode Clean Blue & Soft Card Shadows",
+    image: "/images/dashboards/1786818174664.webp",
+    accentColor: "from-blue-500 via-sky-500 to-indigo-600",
+    badgeText: "8 Civic Views",
+    description: "Light mode population & community portal: Civic Dashboard, Residents Directory, Household Management, Census Survey Records, Public Reports Library, Community Bulletin Board, System Settings, and Civic Auth.",
+    features: [
+      "8 civic administration sub-views with tab navigation",
+      "Purok population distribution & age/gender demographic gauges",
+      "Household composition cards (Nuclear, Extended, Senior)",
+      "Census survey completion rate tracking & export center"
+    ]
+  },
+  {
+    id: "timateo-collab",
+    title: "timateo Team Collaboration Space",
+    subtitle: "Team Onboarding & Action Hub",
+    category: "Productivity",
+    theme: "Modern Glassmorphism & Soft Ice Blue",
+    image: "/images/dashboards/1786818174712.webp",
+    accentColor: "from-sky-400 via-indigo-500 to-purple-500",
+    badgeText: "Workspace Hub",
+    description: "Workspace onboarding interface with quick action cards (Add members, Share file, Assign tasks), app integrations (1Password, AI assistant, Polls), pending invite indicators, and interactive message prompt bar.",
+    features: [
+      "Interactive quick action pill buttons & app launcher carousel",
+      "Invited member pending status badges",
+      "Integrated message prompt bar with attachment shortcuts"
+    ]
+  },
+  {
+    id: "timateo-adventure",
+    title: "timateo Travel & Adventure Explorer",
+    subtitle: "Outdoor Trekking & Destination Hub",
+    category: "Travel & E-Commerce",
+    theme: "Dark Slate & Warm Sunrise Amber",
+    image: "/images/dashboards/1786818174678.webp",
+    accentColor: "from-orange-500 via-amber-500 to-red-600",
+    badgeText: "Adventure Travel",
+    description: "Outdoor trekking platform showcase featuring hero trail map banner, popular trek destination cards (Valley of Flowers, Hampta Pass, Kedarkantha), ratings, reviews, and interactive booking modal.",
+    features: [
+      "Curvature trail map visual highlight card",
+      "Trek destination cards with difficulty levels & user ratings",
+      "Interactive booking drawer & price guarantee badges"
+    ]
   }
 ];
 
